@@ -33,4 +33,7 @@ class BabySleepSchedule(Base):
              self.baby_id = baby_id
              self.sleep_start = sleep_start
              self.sleep_end = sleep_end
+        @property
+        def sleep_amount(self):
+             return self.sleep_end - self.sleep_start
 
