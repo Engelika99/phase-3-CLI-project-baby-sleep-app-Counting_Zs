@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -22,4 +22,10 @@ class Parent(Base):
     
     password_hash = Column(String)
 
-    
+class BabySleepSchedule(Base):
+        __tablename__ = 'sleep schedule'
+        id = Column(Integer, primary_key=True)
+        baby_id =Column(Integer, ForeignKey('baby_id'))
+        sleep_start = Column(DateTime)
+        sleep_end = Column(DateTime)
+
