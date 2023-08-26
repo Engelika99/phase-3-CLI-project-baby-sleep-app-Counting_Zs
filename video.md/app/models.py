@@ -29,3 +29,8 @@ class BabySleepSchedule(Base):
         sleep_start = Column(DateTime)
         sleep_end = Column(DateTime)
 
+        def __int__(self, baby_id, sleep_start, sleep_end):
+             self.baby_id = baby_id
+             self.sleep_start = sleep_start
+             self.sleep_end = sleep_end
+
