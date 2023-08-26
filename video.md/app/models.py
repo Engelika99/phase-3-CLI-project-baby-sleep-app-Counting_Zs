@@ -37,3 +37,10 @@ class BabySleepSchedule(Base):
         def sleep_amount(self):
              return self.sleep_end - self.sleep_start
 
+class BabySleepRecommendations(Base):
+     __tablename__ = 'recommendations'
+     id = Column(Integer, primary_key=True)
+     age_range = Column(String)
+     recommendations = Column(String)
+     recommended_sleep_hours = Column(Integer)
+
