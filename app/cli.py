@@ -1,3 +1,2 @@
-import click 
-
-
+import click  
+from faker import Faker
