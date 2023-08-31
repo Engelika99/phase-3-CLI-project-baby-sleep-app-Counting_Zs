@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime, Date
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, relationship
 
 
 Base = declarative_base()
@@ -21,7 +21,6 @@ class Baby(Base):
     name = Column(String)
     birthday = Column(Date)
     
-    password_hash = Column(String)
 
 class BabySleepSchedule(Base):
         __tablename__ = 'sleep schedule'
