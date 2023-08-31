@@ -3,6 +3,9 @@
 - Write out cli code
 * https://click.palletsprojects.com/en/8.1.x/
 - Check if imports are correct(Is dateTime functioning the way I need it to?)
+* https://pynative.com/python-timedelta/
+* https://www.w3schools.com/python/python_datetime.asp
+* https://www.w3schools.com/python/ref_func_divmod.asp
 - Add in List and dicts during intergration
 - Check if everything is working
 - Type out read me

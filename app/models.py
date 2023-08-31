@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from datetime import timedelta
 
 
 Base = declarative_base()
@@ -39,7 +40,10 @@ class BabySleepSchedule(Base):
              self.sleep_end = sleep_end
         @property
         def sleep_amount(self):
-             return self.sleep_end - self.sleep_start
+            duration = self.sleep_end - self.sleep_start
+            hours = duration.days * 24 + duration.seconds // 3600
+            minutes = (duration.seconds // 60) % 60
+            return f"{hours} hours and {minutes} minutes"
 
 class BabySleepRecommendations(Base):
      __tablename__ = 'recommendations'
