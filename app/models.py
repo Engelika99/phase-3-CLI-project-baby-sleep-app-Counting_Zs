@@ -12,6 +12,7 @@ class Parent(Base):
     name = Column(String)
     email = Column(String)
     password_hash = Column(String)
+    baby = relationship('Baby', back_populates='parents')
 
 class Baby(Base):
     __tablename__ = 'babies'
@@ -20,14 +21,15 @@ class Baby(Base):
     parent_id = Column(Integer, ForeignKey('parent_id'))
     name = Column(String)
     birthday = Column(Date)
-    
+ 
 
 class BabySleepSchedule(Base):
-        __tablename__ = 'sleep schedule'
+        __tablename__ = 'sleep_schedule'
         id = Column(Integer, primary_key=True)
         baby_id =Column(Integer, ForeignKey('baby_id'))
         sleep_start = Column(DateTime)
         sleep_end = Column(DateTime)
+        
 
         def __init__(self, baby_id, sleep_start, sleep_end):
              self.baby_id = baby_id
