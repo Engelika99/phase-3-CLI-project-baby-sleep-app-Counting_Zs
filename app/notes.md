@@ -1,6 +1,7 @@
 - Figure out how to connect the relationships between models
 * https://docs.sqlalchemy.org/en/14/orm/quickstart.html(shows how to use back populate and create engine)
 - Write out cli code
+* https://click.palletsprojects.com/en/8.1.x/
 - Check if imports are correct(Is dateTime functioning the way I need it to?)
 - Add in List and dicts during intergration
 - Check if everything is working
@@ -11,7 +12,7 @@
 * using Click
 * one to many with project examples
 * Table functionality(create, update, delete, etc)
-- DataBase URL sqlalchemy.url = sqlite:///baby_sleep_app_Counting_Zs.db
+# DataBase URL sqlalchemy.url = sqlite:///baby_sleep_app_Counting_Zs.db
 
 the minimum requirements:
 
