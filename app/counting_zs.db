@@ -6,7 +6,7 @@ from models import Base
 CountingZs_db = "sqlite:///baby_sleep_app.db"
 engine = create_engine(CountingZs_db)
 
-
+Base.metadata.create_all(engine)
 
 
 
