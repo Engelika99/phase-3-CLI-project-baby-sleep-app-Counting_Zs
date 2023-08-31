@@ -21,6 +21,7 @@ class Baby(Base):
     parent_id = Column(Integer, ForeignKey('parent_id'))
     name = Column(String)
     birthday = Column(Date)
+    parent = relationship('Parent', back_populates='babies')
  
 
 class BabySleepSchedule(Base):
