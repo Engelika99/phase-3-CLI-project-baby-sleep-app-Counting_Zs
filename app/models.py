@@ -13,8 +13,8 @@ class Parent(Base):
     email = Column(String)
     password_hash = Column(String)
 
-    class Baby(Base):
-        __tablename__ = 'babies'
+class Baby(Base):
+    __tablename__ = 'babies'
 
     id = Column(Integer, primary_key=True)
     parent_id = Column(Integer, ForeignKey('parent_id'))
