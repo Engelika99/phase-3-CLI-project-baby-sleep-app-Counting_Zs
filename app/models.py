@@ -41,7 +41,8 @@ class BabySleepSchedule(Base):
         @property
         def sleep_amount(self):
             duration = self.sleep_end - self.sleep_start
-            hours = duration.days * 24 + duration.seconds // 3600
+            duration = timedelta(seconds=duration.seconds)
+            hours = duration.seconds // 3600
             minutes = (duration.seconds // 60) % 60
             return f"{hours} hours and {minutes} minutes"
 
