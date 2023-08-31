@@ -1,3 +1,4 @@
+## YOU CAN DO IT!!! FINISH THE CODE NO MATTER WHAT
 - Figure out how to connect the relationships between models
 * https://docs.sqlalchemy.org/en/14/orm/quickstart.html(shows how to use back populate and create engine)
 - Write out cli code
