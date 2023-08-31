@@ -30,6 +30,7 @@ class BabySleepSchedule(Base):
         baby_id =Column(Integer, ForeignKey('baby_id'))
         sleep_start = Column(DateTime)
         sleep_end = Column(DateTime)
+        baby = relationship('Baby', back_populates='sleep_schedule')
         
 
         def __init__(self, baby_id, sleep_start, sleep_end):
