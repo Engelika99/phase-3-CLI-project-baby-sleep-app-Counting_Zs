@@ -19,7 +19,7 @@ def cli():
 
 @click.command()
 @click.option('--name', prompt='Enter Your Name', help='Please Enter Your User Name')
-@click.otion('--email', prompt='Enter Your Email', help='Please Enter Your Email')
+@click.option('--email', prompt='Enter Your Email', help='Please Enter Your Email')
 @click.option('--password', prompt='Enter Your Password', hide_password=True, successful_entry_prompt=True help='Please Enter Your Password')
 
 def create_parent(name, email, password_hash): 
@@ -27,4 +27,6 @@ def create_parent(name, email, password_hash):
     session.add(parents)
     session.commit()
     click.echo(f"Parent '{name}' Added Successfully!")
+
+
 
