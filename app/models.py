@@ -13,29 +13,29 @@ class Parent(Base):
     name = Column(String)
     email = Column(String)
     password_hash = Column(String)
-    baby = relationship('Baby', back_populates='parents')
+    babies = relationship('Baby', back_populates='parents')
 
 class Baby(Base):
     __tablename__ = 'babies'
 
     id = Column(Integer, primary_key=True)
-    parent_id = Column(Integer, ForeignKey('parent_id'))
+    parents_id = Column(Integer, ForeignKey('parents.id'))
     name = Column(String)
     birthday = Column(Date)
-    parent = relationship('Parent', back_populates='babies')
+    parents = relationship('Parent', back_populates='babies')
  
 
 class BabySleepSchedule(Base):
         __tablename__ = 'sleep_schedule'
         id = Column(Integer, primary_key=True)
-        baby_id =Column(Integer, ForeignKey('baby_id'))
+        babies_id =Column(Integer, ForeignKey('babies.id'))
         sleep_start = Column(DateTime)
         sleep_end = Column(DateTime)
-        baby = relationship('Baby', back_populates='sleep_schedule')
+        babies = relationship('Baby', back_populates='sleep_schedule')
         
 
-        def __init__(self, baby_id, sleep_start, sleep_end):
-             self.baby_id = baby_id
+        def __init__(self, babies_id, sleep_start, sleep_end):
+             self.babies_id = babies_id
              self.sleep_start = sleep_start
              self.sleep_end = sleep_end
         @property
