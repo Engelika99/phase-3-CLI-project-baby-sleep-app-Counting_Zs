@@ -11,3 +11,14 @@ engine = create_engine(CountingZs_db)
 Session = sessionmaker(bind=engine)
 session = Session()
 
+for _ in range(20):
+    parents = Parent(
+        name=faker.name(),
+        email=faker.email(),
+        password_hash= faker.password(),
+    )
+    session.add(parents)
+
+
+session.commit()    
+
