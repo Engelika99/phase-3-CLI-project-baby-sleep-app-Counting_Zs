@@ -38,7 +38,7 @@ for parent in parents:
 
 session.commit()        
 
-#Create random slepp schedules
+#Create random sleep schedules
 babies = session.query(Baby).all()
 for baby in babies:
     for _ in range(3):
@@ -47,7 +47,7 @@ for baby in babies:
         sleep_start_local = sleep_start.astimezone(user_timezone)
         sleep_end = sleep_start + timedelta(hours=faker.random_int(min=1, max=12))
         schedule = BabySleepSchedule(
-            babies=baby,
+            babies_id=baby.id,
             sleep_start=sleep_start,
             sleep_end=sleep_end
         )

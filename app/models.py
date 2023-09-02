@@ -23,6 +23,7 @@ class Baby(Base):
     name = Column(String)
     birthday = Column(Date)
     parents = relationship('Parent', back_populates='babies')
+    sleep_schedule = relationship('BabySleepSchedule', back_populates='babies')
  
 
 class BabySleepSchedule(Base):
