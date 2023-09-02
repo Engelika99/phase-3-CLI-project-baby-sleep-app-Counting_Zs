@@ -9,6 +9,7 @@ alembic = "*"
 ipdb = "*"
 faker = "*"
 click = "*"
+pytz = "*"
 
 [dev-packages]
 
