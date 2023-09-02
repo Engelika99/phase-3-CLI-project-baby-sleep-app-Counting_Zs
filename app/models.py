@@ -46,10 +46,5 @@ class BabySleepSchedule(Base):
             minutes = (duration.seconds // 60) % 60
             return f"{hours} hours and {minutes} minutes"
 
-class BabySleepRecommendations(Base):
-     __tablename__ = 'recommendations'
-     id = Column(Integer, primary_key=True)
-     age_range = Column(String)
-     recommendations = Column(String)
-     recommended_sleep_hours = Column(Integer)
 
+     

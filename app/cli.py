@@ -2,7 +2,7 @@ import click
 from faker import Faker
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Base, Parent, Baby, BabySleepSchedule, BabySleepRecommendations
+from models import Parent, Baby, BabySleepSchedule
 from datetime import datetime, timedelta
 
 # Create database interaction
