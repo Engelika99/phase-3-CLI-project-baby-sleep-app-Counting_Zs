@@ -4,6 +4,7 @@
 - Write out cli code
 * https://click.palletsprojects.com/en/8.1.x/
 - Check if imports are correct(Is dateTime functioning the way I need it to?)
+* https://www.digitalocean.com/community/tutorials/python-string-to-datetime-strptime
 * https://pynative.com/python-timedelta/
 * https://www.w3schools.com/python/python_datetime.asp
 * https://www.w3schools.com/python/ref_func_divmod.asp
