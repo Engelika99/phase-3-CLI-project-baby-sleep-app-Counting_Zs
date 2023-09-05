@@ -1,5 +1,6 @@
 ## YOU CAN DO IT!!! FINISH THE CODE NO MATTER WHAT
 - Figure out how to connect the relationships between models
+* https://docs.sqlalchemy.org/en/20/core/constraints.html#unique-constraint
 * https://docs.sqlalchemy.org/en/14/orm/quickstart.html(shows how to use back populate and create engine)
 - Write out cli code
 * https://click.palletsprojects.com/en/8.1.x/
@@ -31,3 +32,8 @@ Consider these stretch goals as you progress through your project:
 A database created and modified with SQLAlchemy ORM with 3+ related tables.
 Use of many-to-many relationships with SQLAlchemy ORM.
 Use of additional data structures, such as ranges and tuples.
+
+
+
+
+

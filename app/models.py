@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Date
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Date, UniqueConstraint
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from datetime import timedelta
@@ -29,12 +29,15 @@ class Baby(Base):
 class BabySleepSchedule(Base):
         __tablename__ = 'sleep_schedule'
         id = Column(Integer, primary_key=True)
+        schedule_id = Column(Integer)
         babies_id =Column(Integer, ForeignKey('babies.id'))
         sleep_start = Column(DateTime)
         sleep_end = Column(DateTime)
         babies = relationship('Baby', back_populates='sleep_schedule')
         
-        
+        __table_args__ = (
+            UniqueConstraint('babies_id', 'schedule_id', name='uq_babies_schedule'),
+    )
 
         def __init__(self, babies_id, sleep_start, sleep_end):
              self.babies_id = babies_id
