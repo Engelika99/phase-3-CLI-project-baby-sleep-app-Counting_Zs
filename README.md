@@ -34,7 +34,7 @@ Set up and run the Baby Sleep App on your local machine. Check that you have Pyt
 
    `python cli.py create-babies`
 
-   -Create sleep schedules for babies:
+   - Create sleep schedules for babies:
 
    `python cli.py create-sleep-schedule`
 
