@@ -1,2 +1,2 @@
 # phase 3 video
-coming soon
+https://youtu.be/0VkLDd6da78

@@ -61,6 +61,9 @@ The Baby Sleep App uses a SQLite database with the following schema:
 - `babies` table: Stores information about babies name, birthday, and their parent relationships.(one-to-many between parents and babies)
 - `sleep_schedule` table: Stores sleep schedule data for babies.(one-to-many between babies and sleep schedules)
 
+## This is a very detailed video on how to use the app!
+https://youtu.be/0VkLDd6da78
+
 ## Check out my blog about building a CLI with Click!
 https://medium.com/@engelikaking99/lets-build-a-python-cli-command-line-interface-with-click-d0c73b01e7b3
 
