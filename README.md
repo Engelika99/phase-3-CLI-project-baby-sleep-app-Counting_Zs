@@ -54,12 +54,15 @@ Set up and run the Baby Sleep App on your local machine. Check that you have Pyt
 
    `list-babies`
 
-   ## Database Schema
+   ### Database Schema
 The Baby Sleep App uses a SQLite database with the following schema:
 
 - `parents` table: Stores information about parents name, email, password.
 - `babies` table: Stores information about babies name, birthday, and their parent relationships.(one-to-many between parents and babies)
 - `sleep_schedule` table: Stores sleep schedule data for babies.(one-to-many between babies and sleep schedules)
+
+## Check out my blog about building a CLI with Click!
+https://medium.com/@engelikaking99/lets-build-a-python-cli-command-line-interface-with-click-d0c73b01e7b3
 
 ## Contributing
 Contributions to the Baby Sleep App are welcome! If you want to contribute fork the repository, create a new branch, make your changes, and submit a pull request.
