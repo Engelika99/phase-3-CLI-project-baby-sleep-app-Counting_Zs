@@ -8,7 +8,7 @@ Set up and run the Baby Sleep App on your local machine. Check that you have Pyt
 1. Clone the repository to your local machine:
 - git clone
 
-2. Create and Use virrtual environment:
+2. Create and Use virtual environment:
 - pipenv install
 - pipenv shell
 
